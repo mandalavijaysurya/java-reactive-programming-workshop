@@ -9,7 +9,7 @@ package io.javabrains.reactiveworkshop;
 
 public class User {
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
 
@@ -19,7 +19,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
