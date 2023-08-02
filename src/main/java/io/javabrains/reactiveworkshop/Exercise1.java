@@ -35,6 +35,10 @@ public class Exercise1 {
         StreamSources.intNumbersStream()
                 .flatMap(id -> StreamSources.userStream().filter(num -> num.getId().equals(id)))
                 .forEach(user -> System.out.println(user.getFirstName()));
+        System.out.println("Using filter and any-match functions");
+        StreamSources.userStream()
+                .filter(user -> StreamSources.intNumbersStream().anyMatch(num -> num.equals(user.getId())))
+                .forEach(user -> System.out.println(user.getFirstName()));
     }
 
 }
